@@ -1,0 +1,19 @@
+$primary-color: #213f7d;
+$secondary-color: #39cdcc;
+
+%login-logo {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  position: relative;
+  img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+  }
+  p {
+    font-size: 20px;
+    color: $primary-color;
+    font-weight: 600;
+  }
+}

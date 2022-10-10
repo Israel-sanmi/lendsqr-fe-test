@@ -1,0 +1,64 @@
+@import '../../../Styles/config';
+
+.login-logo{
+    @extend %login-logo;
+}
+
+.dash-head {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+}
+
+.dash-search {
+  input {
+    border: #213f7d 1px solid;
+    width: 400px;
+    padding: 7px 20px;
+    border-radius: 8px;
+    color: #545f7d;
+    font-size: 14px;
+  }
+  .searchBtn {
+    outline: none;
+    border: none;
+    background-color: $secondary-color;
+    color: white;
+    padding: 7px 10px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-left: -32px;
+    cursor: pointer;
+  }
+}
+.dash-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #213f7d;
+    text-decoration: underline;
+  }
+  img {
+    border-radius: 100%;
+  }
+  .notification {
+    color: #213f7d;
+    cursor: pointer;
+  }
+  h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: $primary-color;
+  }
+  .dropDown {
+    color: $primary-color;
+    width: 10px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../Styles/config";
+
+.side-nav {
+  background-color: white;
+  width: 250px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  padding: 20px 0;
+}
+
+.sideHead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $primary-color;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 20px 0px 10px 20px;
+}
+
+.side-tabs {
+  h1 {
+    font-size: 11px;
+    color: #545f7d;
+    margin: 15px 0;
+    padding: 0 20px;
+  }
+ 
+}
+.active-nav {
+  background-color: #39cdcc;
+  border-left: #1c7676 4px solid;
+}
