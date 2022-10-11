@@ -1,8 +1,28 @@
+import { useNavigate } from "react-router";
+import { useForm } from "react-hook-form";
 import logo from "../../assets/lendLogo.png";
 import loginImg from "../../assets/loginImage.svg";
 import "./LogIn.scss";
 
 const LogIn = () => {
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data: any) => {
+    if (data.email && data.password) {
+      navigate("/dashboard");
+    } else {
+      navigate("/");
+      
+    }
+  };
+
   return (
     <div className="Login">
       <div className="left-login-body">
@@ -15,11 +35,30 @@ const LogIn = () => {
       <div className="right-login-body">
         <h1>Welcome!</h1>
         <p>Enter details to login</p>
-        <form>
-          <input type="text" name="email" placeholder="Email" /> <br />
-          <input type="password" name="password" placeholder="Password" />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <input
+            {...register("email", { required: true })}
+            type="email"
+            placeholder="Email"
+          />{" "}
+          <br />
+          {errors.email && (
+            <span className="alert">This field is required</span>
+          )}
+          <br />
+          <input
+            {...register("password", { required: true })}
+            type="password"
+            placeholder="Password"
+          />{" "}
+          <br />
+          {errors.password && (
+            <span className="alert">This field is required</span>
+          )}
           <p>FORGOT PASSWORD?</p>
-          <button>LOG IN</button>
+          <button type="submit" onClick={onSubmit}>
+            LOG IN
+          </button>
         </form>
       </div>
     </div>

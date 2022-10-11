@@ -14,3 +14,16 @@
     color: black;
   }
 }
+
+@media (max-width: 700px) {
+  .tab-desc {
+    display: none;
+  }
+  .tab {
+    padding: 10px;
+  }
+  .tab-icon{
+    font-size: 25px;
+    padding: 5px;
+  }
+}

@@ -5,8 +5,9 @@ import { FaUsers, FaCoins } from "react-icons/fa";
 import { AiOutlineAudit } from "react-icons/ai";
 import Dashnav from "../Element/DashNav/Dashnav";
 import SideNav from "../Element/SideNav/SideNav";
+import Users from "../Users/Users";
 
-const Dashboard = () => {
+const Dashboard = ({ users }:any) => {
   return (
     <div className="dashboard">
       <div>
@@ -22,7 +23,7 @@ const Dashboard = () => {
             <div className="user-info-card">
               <p>USERS</p>
               <ImUsers className="users-icon" />
-              <h5>2,453</h5>
+              <h5>{users.length}</h5>
             </div>
             <div className="user-info-card">
               <p>ACTIVE USERS</p>
@@ -39,6 +40,9 @@ const Dashboard = () => {
               <FaCoins className="savings-icon" />
               <h5>102,453</h5>
             </div>
+          </div>
+          <div>
+            <Users users={users} />
           </div>
         </div>
       </div>

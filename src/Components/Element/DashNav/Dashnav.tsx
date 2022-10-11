@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBell, FaSearch, FaArrowDown } from "react-icons/fa";
+import { FaBell, FaSearch, FaChevronDown } from "react-icons/fa";
 import logo from "../../../assets/lendLogo.png";
 import profileImage from "../../../assets/Dashboard/profileImage.png";
 import './Dashnav.scss'
@@ -23,7 +23,7 @@ const Dashnav = () => {
           <FaBell className="notification" />
           <img src={profileImage} alt="" />
           <h1>Adedeji</h1>
-          <FaArrowDown className="dropDown" />
+           <FaChevronDown className="dropDown" />
         </div>
       </div>
     </div>

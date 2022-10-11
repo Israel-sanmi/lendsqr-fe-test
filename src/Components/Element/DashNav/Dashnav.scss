@@ -1,7 +1,7 @@
-@import '../../../Styles/config';
+@import "../../../Styles/config";
 
-.login-logo{
-    @extend %login-logo;
+.login-logo {
+  @extend %login-logo;
 }
 
 .dash-head {
@@ -16,7 +16,7 @@
 .dash-search {
   input {
     border: #213f7d 1px solid;
-    width: 400px;
+    width: 20rem;
     padding: 7px 20px;
     border-radius: 8px;
     color: #545f7d;
@@ -60,5 +60,28 @@
     color: $primary-color;
     width: 10px;
     height: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  .dash-search {
+    input {
+      width: 10rem;
+      font-size: 12px;
+      padding: 7px 5px;
+      margin: 0 10px;
+    }
+    .searchBtn {
+      display: none;
+    }
+  }
+  .dash-profile{
+    gap: 7px;
+    p{
+        font-size: 12px;
+    }
+    h1{
+      font-size: 12px;
+    }
   }
 }
