@@ -30,6 +30,12 @@
   background-color: #39cdcc;
   border-left: #1c7676 4px solid;
 }
+.hide{
+  display: none;
+}
+.unhide{
+  display: none;
+}
 
 @media (max-width: 700px){
   .sideHead{
@@ -38,7 +44,28 @@
     }
   }
 
+  .unhide{
+    display: block;
+    margin: 0 0 0 113px;
+    padding: 10px;
+    color: $primary-color;
+    transition: all;
+
+  }
+
+  .hide{
+    // margin-right: -200px;
+    display: block;
+    padding: 10px;
+    transition: all;
+    color: $primary-color;
+    transition: all;
+  }
+
   .side-nav{
     width: 100px;
+  }
+  .close-nav{
+    margin-left: -120px;
   }
 }

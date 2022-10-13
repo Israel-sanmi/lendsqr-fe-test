@@ -143,3 +143,67 @@
   padding: 30px 0;
   border-bottom: 1px solid #e6e8eb;
 }
+@media (max-width: 700px) {
+  .details-body {
+    .details {
+      margin: 10px 5px;
+      .nav-back {
+        font-size: 14px;
+        padding: 10px 0;
+      }
+      .user-details {
+        font-size: 14px;
+      }
+      .details-body-header {
+        display: block;
+        // display: flex;
+        padding: 10px;
+        .options {
+          font-size: 12px;
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+  .details-board {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: red;
+    .user-name {
+      font-size: 14px;
+    }
+    .user-account {
+      font-size: 10px;
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .balance {
+      font-size: 15px;
+    }
+    .bank-details {
+      font-size: 10px;
+    }
+  }
+  .links {
+    padding: 10px 0 2px 0;
+    gap: 4px;
+    p {
+      font-size: 10px;
+    }
+  }
+  .details-content {
+    height: 400px;
+    .content-header {
+      font-size: 12px;
+      padding: 10px 5px 0 3px;
+    }
+  }
+  .personal{
+    gap: 10px;
+    padding: 10px 0;
+  }
+}

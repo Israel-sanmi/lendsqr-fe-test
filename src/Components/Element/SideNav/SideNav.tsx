@@ -1,5 +1,5 @@
-import React from "react";
-import { FaBriefcase, FaChevronDown, FaHandshake, FaPiggyBank, FaUserCheck, FaUserTimes, FaBuilding, FaCoins, FaUserCog, FaScroll, FaPercentage } from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBriefcase, FaChevronDown, FaHandshake, FaPiggyBank, FaUserCheck, FaUserTimes, FaBuilding, FaCoins, FaUserCog, FaScroll, FaPercentage, FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import {GiReceiveMoney} from 'react-icons/gi'
 import {GrTransaction, GrServices} from 'react-icons/gr'
 import {GiPayMoney} from 'react-icons/gi'
@@ -11,8 +11,16 @@ import { FaHome, FaUsers } from "react-icons/fa";
 import './sideNav.scss'
 
 const SideNav = () => {
+    const [open, setOpen] = useState(false)
+
+    const side = () => {
+        setOpen(prev => !prev)
+    }
     return (
-      <div className="side-nav">
+        <div className={open ? "side-nav" : "close-nav"}>
+            <div className={open ? "hide" : "unhide"}>
+                { !open ? <FaArrowRight onClick={side}/> : <FaArrowLeft onClick={side}/>}
+            </div>
         <div>
           <div>
             <div className="sideHead">

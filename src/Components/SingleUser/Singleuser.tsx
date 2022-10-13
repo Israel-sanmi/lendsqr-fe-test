@@ -61,8 +61,6 @@ const Singleuser = ({ userDetails, users, contain }: any) => {
                           <FaStar className="full-star" />
                           <FaStar className="full-star" />
                           <FaStar className="full-star" />
-                          {/* <FaStar className="empty-star"/>
-                        <FaStar className="empty-star"/> */}
                         </div>
                         <div>
                           <p className="balance">₦{x.accountBalance}</p>

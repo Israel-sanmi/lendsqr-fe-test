@@ -9,3 +9,12 @@
   font-size: 16px;
   color: #545f7d;
 }
+
+ @media (max-width: 700px) {
+  .title{
+    font-size: 8px;
+  }
+  .info{
+    font-size: 7px;
+  }
+ }

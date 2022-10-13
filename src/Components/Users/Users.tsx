@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { HiDotsVertical } from "react-icons/hi";
 import { BiFilter } from "react-icons/bi";
 import "./users.scss";
-import { FaChevronLeft, FaChevronRight, FaSpinner } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaEye, FaSpinner, FaUserCheck, FaUserMinus } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router";
 import { Link } from "react-router-dom";
@@ -86,17 +86,6 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
   };
 
   const [options, setOptions] = useState(false);
-  const [addState, setAddState] = useState([]);
-  const [deets, setDetts] = useState([]);
-  const [objstore, setObjstore] = useState({});
-
-  useEffect(() => {
-    setDetts(
-      contain.map((x: any) => {
-        return x;
-      })
-    );
-  }, []);
 
   return (
     <div className="users">
@@ -368,21 +357,29 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                           <td>{x.phoneNumber}</td>
                           <td>{x.createdAt}</td>
                           <td>
-                            <HiDotsVertical className="others" />
-                            {
-                              <div>
+                            <HiDotsVertical
+                              onClick={() => {
+                                if (x.id === x.id) {
+                                  setOptions((prev) => !prev);
+                                }
+                              }}
+                              className="others"
+                            />
+                            {options && (
+                              <div className="side-modal">
                                 <Link to={`/dashboard/${x.id}`}>
-                                  <p
-                                    onClick={() => {
-                                      setUserDetails(x);
-                                    }}
-                                  >
-                                    View user
+                                  <p>
+                                    <FaEye /> View user
                                   </p>
                                 </Link>
-                                <p>Delete user</p>
+                                <p>
+                                  <FaUserMinus /> Delete user
+                                </p>
+                                <p>
+                                  <FaUserCheck /> Activate user
+                                </p>
                               </div>
-                            }
+                            )}
                           </td>
                         </tr>
                       </>
@@ -407,17 +404,14 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                               className="others"
                             />
                             {options && (
-                              <div>
+                              <div className="side-modal">
                                 <Link to={`/dashboard/${user.id}`}>
-                                  <p
-                                    // onClick={() => {
-                                    //   setUserDetails(user);
-                                    // }}
-                                  >
-                                    View user
+                                  <p>
+                                   <FaEye/> View user
                                   </p>
                                 </Link>
-                                <p>Delete user</p>
+                                <p><FaUserMinus/>  Delete user</p>
+                                <p><FaUserCheck/> Activate user</p>
                               </div>
                             )}
                           </td>
