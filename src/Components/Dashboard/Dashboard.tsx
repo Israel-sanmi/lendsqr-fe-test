@@ -7,7 +7,7 @@ import Dashnav from "../Element/DashNav/Dashnav";
 import SideNav from "../Element/SideNav/SideNav";
 import Users from "../Users/Users";
 
-const Dashboard = ({ users }:any) => {
+const Dashboard = ({ users, load, contain }: any) => {
   return (
     <div className="dashboard">
       <div>
@@ -23,26 +23,26 @@ const Dashboard = ({ users }:any) => {
             <div className="user-info-card">
               <p>USERS</p>
               <ImUsers className="users-icon" />
-              <h5>{users.length}</h5>
+              <h5>100</h5>
             </div>
             <div className="user-info-card">
               <p>ACTIVE USERS</p>
               <FaUsers className="active-users-icon" />
-              <h5>2,453</h5>
+              <h5>23</h5>
             </div>
             <div className="user-info-card">
               <p>USERS WITH LOANS</p>
               <AiOutlineAudit className="loan-icon" />
-              <h5>12,453</h5>
+              <h5>13</h5>
             </div>
             <div className="user-info-card">
               <p>USERS WITH SAVINGS</p>
               <FaCoins className="savings-icon" />
-              <h5>102,453</h5>
+              <h5>53</h5>
             </div>
           </div>
           <div>
-            <Users users={users} />
+            <Users users={users} load={load} contain={contain} />
           </div>
         </div>
       </div>

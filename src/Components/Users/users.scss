@@ -1,22 +1,138 @@
 .users {
-  background: white;
+  // max-width: 70vw;
+  width: 70vw;
+  position: relative;
+}
+table {
+  background: #ffffff;
   border: 1px solid rgba(33, 63, 125, 0.06);
   box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
-  height: 620px;
-  width: 73vw;
-  // overflow: scroll;
-  margin: 0px 0px 10px 10px;
-  p {
+  padding: 20px;
+  font-size: 13px;
+  color: #545f7d;
+  td {
+    padding: 14px 0;
+    border-bottom: rgba(33, 63, 125, 0.1) 2px solid;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  th {
+    text-transform: uppercase;
     font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .org {
+    text-transform: capitalize;
+  }
+  .others {
     color: #545f7d;
+    cursor: pointer;
+  }
+  .filter {
+    cursor: pointer;
+    font-size: 15px;
   }
 }
 
-.org {
+.moveBtn {
+  background: rgba(33, 63, 125, 0.1);
+  color: #213f7d;
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.page-number {
+  font-weight: 500;
+  font-size: 16px;
+  color: #545f7d;
+  padding: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  background-color: #e5e5e5;
+}
+
+.switchPage {
+  margin: 20px 0;
+  text-align: right;
+}
+
+.spinner {
+  animation: mymove 1s infinite;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+}
+@keyframes mymove {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  width: 270px;
+  height: 500px;
+  position: absolute;
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  input {
+    background: #ffffff;
+    opacity: 0.2;
+    border: 1px solid #213f7d;
+    border-radius: 8px;
+    width: 230px;
+    padding: 10px 0;
+    text-indent: 10px;
+    font-weight: 400;
+  }
+  select {
+    background: #ffffff;
+    opacity: 0.2;
+    border: 1px solid #213f7d;
+    border-radius: 8px;
+    width: 230px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+label {
   text-transform: capitalize;
-  font-style: normal;
-  font-weight: 400;
+}
+.submit {
+  background: #39cdcc;
+  border: 1px solid #39cdcc;
+  border-radius: 8px;
+  width: 98px;
+  font-weight: 600;
   font-size: 14px;
-  line-height: 16px;
+  color: #ffffff;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.reset {
+  border: 1px solid #545f7d;
+  border-radius: 8px;
+  width: 98px;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #545f7d;
+  background-color: white;
+  margin: 0 5px;
+  cursor: pointer;
 }
