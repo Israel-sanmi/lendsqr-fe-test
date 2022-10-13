@@ -35,7 +35,7 @@ const LogIn = () => {
       <div className="right-login-body">
         <h1>Welcome!</h1>
         <p>Enter details to login</p>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="form-login" onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("email", { required: true })}
             type="email"

@@ -98,24 +98,6 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
     );
   }, []);
 
-  // console.log(deets, 'detaill')
-  // useEffect(() => {
-  //   setAddState({
-  //     ...contain, state: false,
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   users.map((x: any) => {
-  //     x.map((a: any) => {
-  //       return console.log(a.id)
-  //     });
-  //   });
-  // }, []);
-  // console.log(addState);
-
-
-
   return (
     <div className="users">
       <div>
@@ -128,7 +110,7 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                   <BiFilter onClick={dropFunct} className="filter" />
                   {dropFilter && (
                     <>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+                      <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
                         <label>Organization</label>
                         <select {...register("org")}>
                           <option value="">Select</option>
@@ -178,7 +160,7 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                   username <BiFilter onClick={dropFunctA} className="filter" />
                   {dropFilterA && (
                     <>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+                      <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
                         <label>Organization</label>
                         <select {...register("org")}>
                           {contain.map((x: any) => {
@@ -227,7 +209,7 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                   Email <BiFilter onClick={dropFunctB} className="filter" />
                   {dropFilterB && (
                     <>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+                      <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
                         <label>Organization</label>
                         <select {...register("org")}>
                           {contain.map((x: any) => {
@@ -277,7 +259,7 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                   <BiFilter onClick={dropFunctC} className="filter" />
                   {dropFilterC && (
                     <>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+                      <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
                         <label>Organization</label>
                         <select {...register("org")}>
                           {contain.map((x: any) => {
@@ -327,7 +309,7 @@ const Users = ({ users, load, contain, setUserDetails, userDetails }: any) => {
                   <BiFilter onClick={dropFunctD} className="filter" />
                   {dropFilterD && (
                     <>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+                      <form className="filter-form" onSubmit={handleSubmit(onSubmit)}>
                         <label>Organization</label>
                         <select {...register("org")}>
                           {contain.map((x: any) => {

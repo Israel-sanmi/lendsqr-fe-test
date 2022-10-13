@@ -1,0 +1,145 @@
+.details-body {
+  display: flex;
+  gap: 20px;
+
+  .details {
+    margin: 20px 10px;
+    .nav-back {
+      font-weight: 400;
+      font-size: 16px;
+      color: #545f7d;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      cursor: pointer;
+      padding: 30px 0;
+      text-decoration: none;
+    }
+    .user-details {
+      font-weight: 500;
+      font-size: 20px;
+      color: #213f7d;
+    }
+    .details-body-header {
+      display: flex;
+      justify-content: space-between;
+      width: 75vw;
+      padding: 30px;
+      .options {
+        font-weight: 600;
+        font-size: 14px;
+        .blacklist {
+          border: 1px solid #e4033b;
+          border-radius: 8px;
+          padding: 7px 10px;
+          cursor: pointer;
+          display: inline-block;
+          color: #e4033b;
+          margin: 0 5px;
+        }
+        .activate {
+          border: 1px solid #39cdcc;
+          border-radius: 8px;
+          padding: 7px 10px;
+          cursor: pointer;
+          display: inline-block;
+          color: #39cdcc;
+        }
+      }
+    }
+  }
+}
+.details-head-container {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 20px 20px 0 20px;
+}
+.details-board {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  img {
+    border-radius: 50%;
+  }
+  .user-name {
+    font-weight: 500;
+    font-size: 22px;
+    color: #213f7d;
+  }
+  .user-account {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545f7d;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  .full-star {
+    color: #e9b200;
+  }
+  //   .empty-star{
+
+  //   }
+  .star {
+    border-left: 1px solid #545f7d;
+    border-right: 1px solid #545f7d;
+    padding: 10px 20px;
+    p {
+      font-weight: 500;
+      font-size: 14px;
+      color: #545f7d;
+    }
+  }
+}
+.balance {
+  font-weight: 500;
+  font-size: 22px;
+  color: #213f7d;
+}
+.bank-details {
+  font-weight: 400;
+  font-size: 12px;
+  color: #213f7d;
+}
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 0 2px 0;
+  p {
+    cursor: pointer;
+  }
+  .active {
+    border-bottom: 2px solid #39cdcc;
+  }
+}
+.details-content {
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  margin: 40px 0 0 0px;
+  height: 650px;
+  padding: 0 20px;
+  .content-header {
+    padding: 20px 10px 0 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #213f7d;
+  }
+}
+.personal {
+  // display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid #e6e8eb;
+}
